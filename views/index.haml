@@ -1,0 +1,20 @@
+!!! 5
+%html(lang="en")
+  %head
+    %title Cоздание мема
+    %link{:rel => "stylesheet", :type => "text/css", :href => "/style/main.css"}
+
+  %body
+
+    %h1 Страница создания мема
+
+    %form{ :action => "/", method: "post"}
+      %label Верхний текст
+      %input{ name: "title" }
+      %label Размер шрифта верхнего текста
+      %input{ name: "title_size", type: "range", min: "10", max: "150", step: "1", value: "126" }
+      %label Нижний текст
+      %textarea{ name: "description" }
+      %label Размер шрифта нижнего текста
+      %input{ name: "description_size", type: "range", min: "10", max: "150", step: "1", value: "72" }
+      %input{type: "submit"}
